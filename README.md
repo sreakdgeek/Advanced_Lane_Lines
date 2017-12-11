@@ -37,7 +37,7 @@ in building such a lane detector:
 [image14]: ./images/sliding_window_histogram.JPG
 [image15]: ./images/radius_of_curvature_calculation.JPG
 [image16]: ./images/radius_of_curvature.JPG
-[image17]: ./images/end_to_end_pipeline.JPg
+[image17]: ./images/end_to_end_pipeline.JPG
 [image18]: ./images/sliding_window_prev_frame.JPG
 
 ---
