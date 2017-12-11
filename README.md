@@ -52,7 +52,6 @@ which are projected onto 2D points in an image represented by vector x, matrix C
 For this project, using chess board images taken from different angles are used to determine the camera matrix C, real world 
 object points and image points.
 
-![alt text][image1]
 
 Calibration Image 1:
 
@@ -61,10 +60,6 @@ Calibration Image 1:
 Calibration Image 2:
 
 ![alt text][image2]
-
-Calibration Image 3:
-![alt text][image3]
-
 
 ### Distortion correction
 
@@ -91,20 +86,24 @@ lane curature can be more clearly identified and we will be able to fit 2nd degr
 Initially, I attempted programmatically deriving the source and destination points for obtaining the projection but carefully
 chosen points worked much better. Below shows the source and destination points that I have selected for the projection:
 
-Source Points
+##### Source Points
 
 left_bottom = (257, 685)
+
 right_bottom = (1050, 685)
 
 left_top =  (583, 460)
+
 right_top = (702, 460)
 
-Destination Points
+##### Destination Points
 
 left_bottom = (300,  height)
+
 right_bottom = (width-300, height)
 
 left_top =  (300, 0)
+
 right_top = (width-300, 0)
 
 ![alt text][image9]
@@ -201,8 +200,8 @@ Below shows the Radius of curvature calculation:
 
 Code snippet:
 
-left_curverad = ((1 + (2*left_fit_cr[0]*y_eval*ym_per_pix + left_fit_cr[1])**2)**1.5) / np.absolute(2*left_fit_cr[0])
-right_curverad = ((1 + (2*right_fit_cr[0]*y_eval*ym_per_pix + right_fit_cr[1])**2)**1.5) / np.absolute(2*right_fit_cr[0])
+     left_curverad = ((1 + (2*left_fit_cr[0]*y_eval*ym_per_pix + left_fit_cr[1])**2)**1.5) / np.absolute(2*left_fit_cr[0])
+     right_curverad = ((1 + (2*right_fit_cr[0]*y_eval*ym_per_pix + right_fit_cr[1])**2)**1.5) / np.absolute(2*right_fit_cr[0])
 
 
 Below is Radius of curvature 
@@ -215,7 +214,7 @@ This metric is calculated assuming that the camera is fixed to the center of the
 This metric provides insight on how much deviation exists between the vehicle position and
 the base of lane center. This is calculated as:
 
-        |(image width - average of left and right lane markings)|
+    |(image width - average of left and right lane markings)|
 
 Code snippet:
 
